@@ -46,11 +46,13 @@ export type ApiClient = {
 	getSearch: (searchValue: string, newPage?:number, startDate?: Date, endDate?: Date, resetDate?: boolean) => Promise<any[]>;
 	getItemSearch: (searchVal: string, newPage?:number, startDate?: Date, endDate?: Date, resetDate?: boolean) => Promise<any[]>;
 }
+var env = process.env.NODE_ENV || 'development'
+const API_ADDRESS = env === 'production' ? 'https://web-orders-app.herokuapp.com' : 'http://localhost:5000';
 
 export const createApiClient = (): ApiClient => {
 	return {
 		getOrders: (newPage?: number, filterOption?: string, startDate?: Date, endDate?: Date, resetDate?: boolean) => {
-			return axios.get(`http://localhost:5000/api/orders`,
+			return axios.get(`${API_ADDRESS}/api/orders`,
 				{
 					params:
 					{
@@ -65,16 +67,16 @@ export const createApiClient = (): ApiClient => {
 
 		},
 		getItem: (itemId: string) => {
-			return axios.get(`http://localhost:5000/api/items/${itemId}`).then((res) => res.data);
+			return axios.get(`${API_ADDRESS}/api/items/${itemId}`).then((res) => res.data);
 		},
 		setFulfilment: (orderId: number) => {
-			axios.post(`http://localhost:5000/api/orders/${orderId}`);
+			axios.post(`${API_ADDRESS}/api/orders/${orderId}`);
 		},
 		getNonDeliveredQuantity: () => {
-			return axios.get(`http://localhost:5000/api/count`).then((res) => res.data);
+			return axios.get(`${API_ADDRESS}/api/count`).then((res) => res.data);
 		},
 		getSearch: (searchValue: string, newPage?:number, startDate?: Date, endDate?: Date, resetDate?: boolean) => {
-			return axios.get(`http://localhost:5000/api/search`,
+			return axios.get(`${API_ADDRESS}/api/search`,
 				{
 					params:
 					{
@@ -88,7 +90,7 @@ export const createApiClient = (): ApiClient => {
 				.then((res) => res.data);
 		},
 		getItemSearch: (searchVal: string, newPage?:number, startDate?: Date, endDate?: Date, resetDate?: boolean) => {
-			return axios.get(`http://localhost:5000/api/itemSearch`, {
+			return axios.get(`${API_ADDRESS}/api/itemSearch`, {
 				params: {
 					value: searchVal,
 					page: newPage,
