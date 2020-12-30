@@ -20,6 +20,6 @@
   },
   "include": [
 	  "types.d.ts",
-	  "*.ts"
-	]
+    "*.ts"
+  ]
 }

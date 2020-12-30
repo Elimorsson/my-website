@@ -9,8 +9,9 @@
     "client:build": "cd ./client && npm run build",
     "server": "cd ./server && nodemon server.ts",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "tsc"
+    "start": "node build/index.js",
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
