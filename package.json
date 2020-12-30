@@ -9,7 +9,7 @@
     "client:build": "cd ./client && npm run build",
     "server": "cd ./server && nodemon server.ts",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "ts-node ./server/server.ts"
+    "start": "NODE_ENV=production ts-node ./server/server.ts"
   },
   "repository": {
     "type": "git",
