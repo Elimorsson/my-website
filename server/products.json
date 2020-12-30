@@ -1,0 +1,94 @@
+{
+  "products": {
+    "4920c0ce-a9cd-40a9-9ce0-6f3caf9013bc": {
+      "name": "Catch a Wave Active Fit",
+      "images": {
+        "original": "https://i.ibb.co/0qLNGk4/18d214-d4fe265448c14b849c646fa6263f0df7-mv2.jpg",
+        "medium": "https://i.ibb.co/ZWdXqfr/Catch-AWave-Active-Fit-1.jpg",
+        "small": "https://i.ibb.co/HTLR95Y/Catch-AWave-Active-Fit.jpg"
+      },
+      "price": 12
+    },
+    "37a45205-a2f2-41d2-a43d-a78f7021d3d2": {
+      "name": "Fineapple Pineapple",
+      "images": {
+        "original": "https://i.ibb.co/vYrjXfR/18d214-df40971fcbfc4515b9cc6c9a9673c07a-mv2.jpg",
+        "medium": "https://i.ibb.co/frHnDxd/Fineapple-Pineapple-medium.jpg",
+        "small": "https://i.ibb.co/1MRdXQk/Fineapple-Pineapple-small.jpg"
+      },
+      "price": 12
+    },
+    "abe54e8c-1768-427a-8c36-25eccefa3916": {
+      "name": "Sweet Peppermint",
+      "images": {
+        "original": "https://i.ibb.co/993v7pZ/18d214-0a523b2709a74e2ba0fda8bfd78c5ab5-mv2-d-1800-1800-s-2-original.jpg",
+        "medium": "https://i.ibb.co/4pmG58M/Sweet-Peppermint-mdeium.jpg",
+        "small": "https://i.ibb.co/bXmK8xQ/Sweet-Peppermint-small.jpg"
+      },
+      "price": 9
+    },
+    "68f6681e-ffde-429b-80c2-52507467d625": {
+      "name": "Evergreen",
+      "images": {
+        "original": "https://i.ibb.co/Px7tRxy/18d214-3252d9ab2fee402781f4549e22e16be4-mv2-d-1800-1800-s-2.jpg",
+        "medium": "https://i.ibb.co/nfcpv5n/Evergreen-medium.jpg",
+        "small": "https://i.ibb.co/RC3H63G/Evergreen-small.jpg"
+      },
+      "price": 11
+    },
+    "717ea22f-f253-4ba2-bee7-fd0ccd7d356b": {
+      "name": "Saturday Morning Cartoons",
+      "images": {
+        "original": "https://i.ibb.co/txG3CHY/18d214-cf75d2a174324a10909c0b5a47f44226-mv2-d-1500-1500-s-2.jpg",
+        "medium": "https://i.ibb.co/VBvk8RR/Saturday-Morning-Cartoons-mdeium.jpg",
+        "small": "https://i.ibb.co/W5S1VM6/Saturday-Morning-Cartoons-small.jpg"
+      },
+      "price": 10
+    },
+    "12e01d4a-3b6c-48a1-ad54-6a727c59eacf": {
+      "name": "Float Away",
+      "images": {
+        "original": "https://i.ibb.co/wYjJdpM/18d214-6a708a882ecd483fa6100e59c21c51db-mv2-d-1500-1500-s-2.jpg",
+        "medium": "https://i.ibb.co/DwYvkGM/Float-Away-medium.jpg",
+        "small": "https://i.ibb.co/vx2zHdq/Float-Away-small.jpg"
+      },
+      "price": 12
+    },
+    "b3dd8bd4-6ff1-48ce-9e25-f6be56eb2718": {
+      "name": "Future So Bright",
+      "images": {
+        "original": "https://i.ibb.co/BTJfzGY/18d214-376b86e10f0f43be836e6186daaefa36-mv2-d-1500-1500-s-2.jpg",
+        "medium": "https://i.ibb.co/bNyqVh7/Future-So-Bright-mdeium.jpg",
+        "small": "https://i.ibb.co/YpBJqtM/Future-So-Bright-small.jpg"
+      },
+      "price": 10
+    },
+    "64c85187-522d-4d3b-929d-d872b338f646": {
+      "name": "Bloom Summer",
+      "images": {
+        "original": "https://i.ibb.co/SQpSJys/18d214-a19e8b94c038415b80826802b2c810eb-mv2.jpg",
+        "medium": "https://i.ibb.co/SXCDxjy/Bloom-Summer-medium.jpg",
+        "small": "https://i.ibb.co/72DBSMN/Bloom-Summer-small.jpg"
+      },
+      "price": 14
+    },
+    "4692bfa5-b686-45af-854f-117a8a6ad2c1": {
+      "name": "Think Happy",
+      "images": {
+        "original": "https://i.ibb.co/KD95jSN/18d214-731e2a3ba16f4d459384448ee2a555f9-mv2-d-4000-5328-s-4-2.jpg",
+        "medium": "https://i.ibb.co/xGkycGs/Think-Happy-mdeium.jpg",
+        "small": "https://i.ibb.co/zhF7v4Y/Think-Happy-small.jpg"
+      },
+      "price": 8
+    },
+    "c109bd19-aec6-4702-9f58-60f7cc2b98e5": {
+      "name": "OH YEAH!",
+      "images": {
+        "original": "https://i.ibb.co/KjBDT0H/18d214-39c03af1d0fe46ecaf30647ae42d48ea-mv2-d-1500-1200-s-2.jpg",
+        "medium": "https://i.ibb.co/yB3z8Wk/Oh-Yeah-mdeium.jpg",
+        "small": "https://i.ibb.co/F0W2fZy/Oh-Yeah-small.jpg"
+      },
+      "price": 5
+    }
+  }
+}
