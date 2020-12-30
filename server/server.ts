@@ -57,9 +57,9 @@ app.use('/api/v1/', api);
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
     app.use(express.static(path.join(__dirname, '../client/build')));
 
-    app.get('*', function (req, res) {
-        res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-    });
+    // app.get('*', function (req, res) {
+    //     res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    // });
 };
 
 // Catch any bad requests
