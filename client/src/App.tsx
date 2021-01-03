@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'axios';
 import { createApiClient, Order } from './api';
 import OrderCard from './components/OrderCard';
 import DatePicker from "./components/DatePicker";
@@ -20,6 +19,8 @@ const FILTER_NAMES = [
 	"Not-Paid",
 	"Refunded"
 ];
+
+
 
 export type AppState = {
   orders?: Order[],
@@ -54,12 +55,11 @@ class App extends React.PureComponent<{}, AppState> {
 
 
   async componentDidMount() {
-    //old---
-    axios.get(`/api/v1/say-somthing`).then((res) => {
-      const response = res.data.answer;
-      this.setState({ response });
-    });
-    //until here
+    // //old---
+    // axios.get(`/api/v1/say-somthing`).then((res) => {
+    //   const response = res.data.answer;
+    //   this.setState({ response });
+    // });
     this.sendFilterRequest = this.sendFilterRequest.bind(this);
     this.getNonDeliveredQuantity();
     const ans = await api.getOrders(this.state.page, "All", undefined, undefined, true);
@@ -189,13 +189,8 @@ class App extends React.PureComponent<{}, AppState> {
     var orders = this.state.search.length === 0 ? this.state.orders : this.state.searchResults;
     return (
       <main>
-        <div className="App">
-          <h1>Hello Elimor from the Client!</h1>
-          <h1>{this.state.response}</h1>
-          <h2>After server msg</h2>
-        </div>
         <h1>Orders</h1>
-        <h3>Number of non delivered orders: {this.state.nonDeliveredOrders ?? "Fetching..."}</h3>
+        <h3 className="nonDeliverTitle">Number of non delivered orders: {this.state.nonDeliveredOrders ?? "Fetching..."}</h3>
         <header>
           <input key={this.state.index} type="search" placeholder="Search" onChange={(e) => { this.onSearch(e.target.value) }} />
           <br />
@@ -205,7 +200,7 @@ class App extends React.PureComponent<{}, AppState> {
         </header>
         <div className='searchFilters'>
           <FormControl component="fieldset">
-            <FormLabel component="legend">Display Modes</FormLabel>
+            <FormLabel component="legend" className="display-mode">Display Modes</FormLabel>
             <RadioGroup row aria-label="position" name="position" defaultValue="All"
               onChange={(e) => {
                 const status = e.target.value.toString();
@@ -231,6 +226,7 @@ class App extends React.PureComponent<{}, AppState> {
             </RadioGroup>
           </FormControl>
           <FormControlLabel
+          className="item-search"
             control={
               <Switch
                 checked={this.state.itemSearch}
