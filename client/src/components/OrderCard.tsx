@@ -88,7 +88,7 @@ export default class OrderCard extends React.PureComponent<{ order: Order, getAs
                 </div>
                 <div className={'fulfillmentData'}>
                     <h4>{this.state.order.itemQuantity} Items</h4>
-                    <img src={this.props.getAsset(this.state.order.fulfillmentStatus)} alt={"hey"} />
+                    <img src={this.props.getAsset(this.state.order.fulfillmentStatus)} alt={""} />
                     {this.state.order.fulfillmentStatus !== 'canceled' &&
                         <a onClick={this.handleFullFillmentClick}>
                             Mark as {this.state.order.fulfillmentStatus === 'fulfilled' ? 'Not Delivered' : 'Delivered'}</a>
@@ -101,9 +101,10 @@ export default class OrderCard extends React.PureComponent<{ order: Order, getAs
                 <div className="orderDeatils">
                     <h6
                         className="toggle-button"
-                        id="centered-toggle-button" onClick={this.showModal}>
+                        id="centered-toggle-button" >
                         <button type="button"
-                            className="btn toggle-btn" >
+                            className="btn toggle-btn"
+                            onClick={this.showModal}>
                             More Details
                         </button>
                     </h6>

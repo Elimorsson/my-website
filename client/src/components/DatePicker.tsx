@@ -91,14 +91,16 @@ export default class DatePicker extends React.Component<DatePickerProps, DatePic
       <div className="searchDate">
         <h6
           className="toggle-button"
-          id="centered-toggle-button" onClick={() => this.setState({ showModal: !this.state.showModal })}>
-          <button type="button"
-            className="dateBtn toggle-btn" >
+          id="centered-toggle-button" >
+          <button type="button" id="show-date-picker"
+            className="dateBtn toggle-btn"
+            onClick={() => this.setState({ showModal: !this.state.showModal })} >
+              
             Show Date Picker
                     </button>
         </h6>
         <Modal
-          lable='Come on pick a date pick pick pick a Date...'
+          lable=''
           showModal={this.state.showModal}
           onClose={() => {
             if (from === undefined || to === undefined) {
@@ -122,7 +124,7 @@ export default class DatePicker extends React.Component<DatePickerProps, DatePic
               className="Selectable"
               month={new Date(2020, 5)}
               numberOfMonths={this.state.numberOfMonths}
-              // selectedDays={[from, { from: from as Date, to: to as Date }]}
+              selectedDays={[from, { from: from ?? new Date(), to: to ?? from ?? new Date()}]}
               modifiers={modifiers}
               onDayClick={this.handleDayClick}
               todayButton={"Today"}
@@ -135,13 +137,13 @@ export default class DatePicker extends React.Component<DatePickerProps, DatePic
         {
           from !== undefined && to !== undefined ?
             <div style={{ display: "inline-flex" }}>
-              <h5 style={{ paddingLeft: "10px", paddingRight: "10px" }}>{`Showing orders from ${from.toLocaleDateString()} to ${to.toLocaleDateString()}`}</h5>
-              <button className="customBackgroundForTouch"
+              <h5 style={{ paddingLeft: "2px", paddingRight: "10px", paddingTop:"10px", color: "#111111", fontWeight:"bold",}}>{`Showing orders from ${from.toLocaleDateString()} to ${to.toLocaleDateString()}`}</h5>
+              <button className="customBackgroundForTouch dateBtn"
                 style={{ background: this.state.styleBackground }}
                 onMouseEnter={() => {
                   this.setState({
                     ...this.state,
-                    styleBackground: "#ff0000"
+                    styleBackground: "#e2e1e1"
                   })
                 }}
                 onMouseLeave={() => {
