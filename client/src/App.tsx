@@ -191,13 +191,6 @@ class App extends React.PureComponent<{}, AppState> {
       <main>
         <h1>Orders</h1>
         <h3 className="nonDeliverTitle">Number of non delivered orders: {this.state.nonDeliveredOrders ?? "Fetching..."}</h3>
-        <header>
-          <input key={this.state.index} type="search" placeholder="Search" onChange={(e) => { this.onSearch(e.target.value) }} />
-          <br />
-          <h3 className='searchDate'>
-            <DatePicker pickerHandler={this.sendFilterRequest} />
-          </h3>
-        </header>
         <div className='searchFilters'>
           <FormControl component="fieldset">
             <FormLabel component="legend" className="display-mode">Display Modes</FormLabel>
@@ -241,6 +234,13 @@ class App extends React.PureComponent<{}, AppState> {
             label="Item search"
           />
         </div>
+        <header>
+          <input key={this.state.index} className="search" type="search" placeholder="Search" onChange={(e) => { this.onSearch(e.target.value) }} />
+          <br />
+          <h3 className='searchDate'>
+            <DatePicker pickerHandler={this.sendFilterRequest} />
+          </h3>
+        </header>
         { orders ? <div className='results'>{this.showingResult()}</div> : null}
         { orders ? <div className='orders'>{this.renderOrders(orders)}</div> : <h2>Loading...</h2>}
         {
