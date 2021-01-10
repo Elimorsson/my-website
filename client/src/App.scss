@@ -77,22 +77,22 @@ body {
 	}
 	.customBackgroundForTouch {
 		margin-top: 5px;
-		background-color: inherit;
 		display: inline-block;
 		cursor: pointer;
 	  }
 
 	.dateBtn {
-		background-color: #fdfdfd; /* Green */
-		border: rgb(187, 187, 187);
+		background-color: #4542e03b;
+		border: rgba(0, 0, 0, 0.52);
 		border-style:solid;
 		border-radius: 10%;
-		color: rgb(92, 92, 92);
+		color: rgb(47, 47, 47);
+		font-weight: bold;
 		text-align: center;
 		text-decoration: d;
 		display: inline-block;
 		font-size: 16px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	}	
 	
 	.display-mode {
@@ -127,7 +127,7 @@ body {
 
 	  
 	#show-date-picker:hover{
-		background-color: #e2e1e1;
+		background-color: #ffffff3b;
 		cursor: pointer;
 	}
 	.orders {
@@ -188,7 +188,7 @@ body {
 	h6 {
 		font-size: 10px;
 		font-weight: 400;
-		color: #7a92a5;
+		color: #8f979c;
 		margin: 0;
 	}
 
