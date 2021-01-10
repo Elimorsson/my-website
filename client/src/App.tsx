@@ -5,7 +5,6 @@ import OrderCard from './components/OrderCard';
 import DatePicker from "./components/DatePicker";
 import { Pagination } from '@material-ui/lab/';
 import { Switch, FormControlLabel, FormControl, FormLabel, Radio, RadioGroup } from '@material-ui/core/';
-import "react-datepicker/dist/react-datepicker.css";
 
 const api = createApiClient();
 const PAGE_SIZE = 20;
@@ -243,15 +242,15 @@ class App extends React.PureComponent<{}, AppState> {
         </header>
         { orders ? <div className='results'>{this.showingResult()}</div> : null}
         { orders ? <div className='orders'>{this.renderOrders(orders)}</div> : <h2>Loading...</h2>}
+        <div className="pagination">
         {
-          //this.state.search.length === 0 ?
           <Pagination
             count={this.state.pageQuantity}
             color="primary"
             page={this.state.page}
             onChange={(e, page) => this.handleChangePage(page)} />
-          //: null
         }
+        </div>
       </main >
     )
   }

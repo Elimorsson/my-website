@@ -4,6 +4,7 @@ import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 import Modal from './Modal';
 import '../App.scss';
+import { responsiveFontSizes } from '@material-ui/core';
 
 const style = `
   .Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
@@ -55,7 +56,7 @@ export default class DatePicker extends React.Component<DatePickerProps, DatePic
       to: undefined,
       numberOfMonths: 2,
       showModal: false,
-      styleBackground: "inherit"
+      styleBackground: "#4542e03b"
     };
   }
 
@@ -95,7 +96,6 @@ export default class DatePicker extends React.Component<DatePickerProps, DatePic
           <button type="button" id="show-date-picker"
             className="dateBtn toggle-btn"
             onClick={() => this.setState({ showModal: !this.state.showModal })} >
-              
             Show Date Picker
                     </button>
         </h6>
@@ -137,19 +137,19 @@ export default class DatePicker extends React.Component<DatePickerProps, DatePic
         {
           from !== undefined && to !== undefined ?
             <div style={{ display: "inline-flex" }}>
-              <h5 style={{ paddingLeft: "2px", paddingRight: "10px", paddingTop:"10px", color: "#111111", fontWeight:"bold",}}>{`Showing orders from ${from.toLocaleDateString()} to ${to.toLocaleDateString()}`}</h5>
+              <h5 style={{ paddingLeft: "2px", paddingRight: "10px", paddingTop:"10px", color: "#111111", fontWeight:"bold", fontSize:"16px"}}>{`Showing orders from ${from.toLocaleDateString()} to ${to.toLocaleDateString()}`}</h5>
               <button className="customBackgroundForTouch dateBtn"
                 style={{ background: this.state.styleBackground }}
                 onMouseEnter={() => {
                   this.setState({
                     ...this.state,
-                    styleBackground: "#e2e1e1"
+                    styleBackground: "#ffffff3b"
                   })
                 }}
                 onMouseLeave={() => {
                   this.setState({
                     ...this.state,
-                    styleBackground: "#FFFFFF"
+                    styleBackground: "#4542e03b"
                   })
                 }}
                 onClick={this.handleResetClick}>Reset</button>
