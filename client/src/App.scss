@@ -38,7 +38,7 @@ body {
 	header {
 		width: 1000px;
 		border-radius: 6px;
-		background-color:rgb(231, 231, 255);
+		background-color: rgba(225, 227, 255, 0.63);
 		box-shadow: 0 2px 6px 1px #e1e5e8;
 		margin-bottom: 14px;
 		border: 1px solid #fff;
@@ -65,7 +65,7 @@ body {
 	.search{
 		margin-top: 10px;
 		padding: 10px;
-		background-color:rgb(253, 253, 253);
+		background-color:rgba(253, 253, 253, 0.835);
 	}
 	.searchFilters{
 		display: flex;
@@ -110,7 +110,7 @@ body {
 		width: 980px;
 		height: 90px;
 		border-radius: 8px;
-		background-color: rgb(231, 231, 255);
+		background-color: rgba(225, 227, 255, 0.63);
 		box-shadow: 0 2px 6px 1px #e1e5e8;
 		margin: 0 -1px 14px -1px;
 		border: 1px solid #fff;
