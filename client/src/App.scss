@@ -28,11 +28,15 @@ body {
 	}
 
 	.results {
-		color:rgb(218, 216, 216);
-		-webkit-text-stroke-color: black;
-		-webkit-text-stroke-width: 0.01vmin;
+		color:rgb(0, 0, 0);
 		font-size: 20px;
-		margin: 12px 5px;
+		margin: 14px 5px;
+		width: 280px;
+		border-radius: 6px;
+		background-color: rgba(225, 227, 255, 0.63);
+		box-shadow: 0 2px 6px 1px #e1e5e8;
+		padding: 0.5px 10px;
+		position: relative;	
 	}
 
 	header {
@@ -196,6 +200,16 @@ body {
 		margin-top: 4px;
 	}
 
+	.pagination {
+		width: 350px;
+		border-radius: 6px;
+		background-color: rgba(225, 227, 255, 0.63);
+		box-shadow: 0 2px 6px 1px #e1e5e8;
+		margin-bottom: 14px;
+		// border: 1px solid #fff;
+		padding: 0.5px 10px;
+		position: relative;	
+	}
 
 	a {
 		display: block;
