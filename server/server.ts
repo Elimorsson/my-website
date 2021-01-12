@@ -15,10 +15,9 @@ var filterType = "";
 var startDate: Date | undefined = undefined;
 var endDate: Date | undefined = undefined;
 
-const PORT = 3232;
 const PAGE_SIZE = 20;
 
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 
 // This application level middleware prints incoming requests to the servers console, useful to see incoming requests
@@ -192,4 +191,4 @@ app.get('/api/itemSearch', (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`BACK_END_SERVICE_PORT: ${port}`));
+app.listen(PORT, () => console.log(`BACK_END_SERVICE_PORT: ${PORT}`));
